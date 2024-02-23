@@ -19,7 +19,7 @@ class IntroPage2 extends StatelessWidget {
               height: 20,
             ),
             Text(
-              'Таалагдсан үнэлгээ дээрээ сэтгэгдэл болон үнэлгээ өгөх боломжтой',
+              'Таалагдсан үнэлгээ дээрээ сэтгэгдэл болон үнэлгээ өгөх боломжтой!',
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 20,
