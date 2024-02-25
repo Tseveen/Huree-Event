@@ -1,8 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:huree_event_app/views/onboarding_screen.dart';
+import 'package:huree_event_app/intro_screens/intro_page_1.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+      options: FirebaseOptions(
+    apiKey: "AIzaSyBiueJfVg7YBb9EqzVCoNo4KPAPf_4W9XQ",
+    appId: "1:266124884429:android:949f22cdda7f3be24dec84",
+    messagingSenderId: "266124884429",
+    projectId: "huree-b105a",
+  ));
   runApp(const MyApp());
 }
 
@@ -12,13 +20,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        textTheme: GoogleFonts.latoTextTheme(
-          Theme.of(context).textTheme,
-        ),
-      ),
       title: 'Flutter Demo',
-      home: OnboardingScreen(),
+      home: IntroPage1(),
     );
   }
 }

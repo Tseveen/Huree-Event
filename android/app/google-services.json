@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "266124884429",
+    "project_id": "huree-b105a",
+    "storage_bucket": "huree-b105a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266124884429:android:949f22cdda7f3be24dec84",
+        "android_client_info": {
+          "package_name": "com.example.huree_event_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiueJfVg7YBb9EqzVCoNo4KPAPf_4W9XQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
