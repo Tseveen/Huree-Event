@@ -1,3 +1,4 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:huree_event_app/views/onboarding_screen.dart';
@@ -20,8 +21,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: OnboardingScreen(),
-    );
+        debugShowCheckedModeBanner: false,
+        home: AnimatedSplashScreen(
+          splash: Image.asset(
+            'assets/logos/huree_logo.png',
+            height: 100,
+          ),
+          nextScreen: OnboardingScreen(),
+          splashTransition: SplashTransition.fadeTransition,
+          backgroundColor: Colors.blueAccent,
+        ));
   }
 }

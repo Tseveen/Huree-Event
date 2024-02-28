@@ -43,103 +43,109 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: Colors.grey[300],
       body: SafeArea(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const SizedBox(height: 50),
-              Image.asset(
-                'assets/logos/huree2.png',
-                height: 70,
-              ),
-              const SizedBox(height: 50),
-              Text(
-                'Huree',
-                style: TextStyle(color: Colors.grey[700], fontSize: 16),
-              ),
-              const SizedBox(height: 25),
-              MyTextfield(
-                controller: emailController,
-                hintText: 'Хэрэглэгчийн нэр',
-                obscureText: false,
-              ),
-              const SizedBox(height: 25),
-              MyTextfield(
-                controller: passwordController,
-                hintText: 'Нууц үг',
-                obscureText: true,
-              ),
-              const SizedBox(height: 25),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      'Нууц үг мартсан',
-                      style: TextStyle(color: Colors.grey[600]),
-                    ),
-                  ],
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 50),
+                Image.asset(
+                  'assets/logos/huree2.png',
+                  height: 70,
                 ),
-              ),
-              const SizedBox(height: 25),
-              MyButton(
-                onTap: signUserIn,
-              ),
-              const SizedBox(height: 50),
-              Padding(
-                padding: const EdgeInsets.all(25.0),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Divider(
-                        thickness: 0.5,
-                        color: Colors.grey[400],
-                      ),
-                    ),
-                    Text(
-                      'Өөр хаягуудаар бүртгүүлэх',
-                      style: TextStyle(color: Colors.grey[700]),
-                    ),
-                    Expanded(
-                      child: Divider(
-                        thickness: 0.5,
-                        color: Colors.grey[400],
-                      ),
-                    ),
-                  ],
+                const SizedBox(height: 50),
+                Text(
+                  'Huree Event Management System',
+                  style: TextStyle(
+                      color: const Color.fromARGB(255, 0, 51, 93),
+                      fontSize: 20),
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SquareTile(imagePath: 'assets/logos/google.png'),
-                ],
-              ),
-              SizedBox(width: 10),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return SignUpScreen();
-                        }));
-                      },
-                      child: Text(
-                        'Шинээр бүртгүүлэх',
+                const SizedBox(height: 25),
+                MyTextfield(
+                  controller: emailController,
+                  hintText: 'Хэрэглэгчийн нэр',
+                  obscureText: false,
+                ),
+                const SizedBox(height: 25),
+                MyTextfield(
+                  controller: passwordController,
+                  hintText: 'Нууц үг',
+                  obscureText: true,
+                ),
+                const SizedBox(height: 25),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        'Нууц үг мартсан',
                         style: TextStyle(
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold,
+                            color: Colors.blue, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 25),
+                MyButton(
+                  buttonText: 'Нэвтрэх',
+                  onTap: signUserIn,
+                ),
+                const SizedBox(height: 50),
+                Padding(
+                  padding: const EdgeInsets.all(25.0),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Divider(
+                          thickness: 0.5,
+                          color: Colors.grey[400],
                         ),
                       ),
-                    ),
+                      Text(
+                        'Өөр хаягуудаар нэвтрэх',
+                        style: TextStyle(color: Colors.grey[700]),
+                      ),
+                      Expanded(
+                        child: Divider(
+                          thickness: 0.5,
+                          color: Colors.grey[400],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SquareTile(imagePath: 'assets/logos/google.png'),
                   ],
                 ),
-              ),
-            ],
+                SizedBox(width: 10),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return SignUpScreen();
+                          }));
+                        },
+                        child: Text(
+                          'Шинээр бүртгүүлэх',
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
